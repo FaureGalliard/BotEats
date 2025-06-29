@@ -3,74 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BotEat: Drones con cajas de cartón para un delivery rápido, sostenible y minimalista.">
-  <meta name="title" content="BotEat: Delivery del Futuro">
-  <meta name="keywords" content="delivery, drones, carton, BotEat, sostenible, minimalista">
-  <title>BotEat - Delivery del Futuro</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <meta name="description" content="BotEats: Delivery autónomo 24/7 con drones. Más rápido, más barato y sin límites horarios.">
+  <title>BotEats - Delivery Autónomo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#features">Características</a></li>
+  
+  <header class="header">
+    <nav class="navbar">
+    <div class="logo-container">
+      <div class="logo">BotEats</div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#problem">Problema</a></li>
+      <li><a href="#solution">Solución</a></li>
+      <li><a href="#benefits">Beneficios</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
   </nav>
+  </header>
 
-  <section id="hero">
-    <div>
-      <h1>Delivery Sostenible</h1>
-      <p>Drones con cajas de cartón para entregas rápidas y eco-amigables.</p>
-      <a href="#contact" class="btn">Solicita una Demo</a>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Delivery del futuro, disponible hoy</h1>
+        <p class="subtitle">Drones autónomos que entregan tu comida sin interrupciones, sin tráfico, sin humanos.</p>
+        <div class="cta-container">
+          <a href="#contact" class="cta-button">Quiero más información</a>
+          <a href="#demo" class="secondary-button">Ver demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="problem-section">
+      <h2>Los desafíos del delivery tradicional</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <i class="fas fa-traffic-light"></i>
+          <h3>Tráfico y demoras</h3>
+          <p>Los motorizados pierden tiempo en congestiones vehiculares, retrasando entregas.</p>
+        </div>
+        <div class="problem-card">
+          <i class="fas fa-money-bill-wave"></i>
+          <h3>Altos costos</h3>
+          <p>Sueldos, beneficios y turnos nocturnos incrementan los costos operativos.</p>
+        </div>
+        <div class="problem-card">
+          <i class="fas fa-clock"></i>
+          <h3>Horarios limitados</h3>
+          <p>La dependencia de humanos impide operar las 24 horas durante los 7 días.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="solution-section">
+      <div class="solution-content">
+        <h2>Nuestra solución innovadora</h2>
+        <div class="solution-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-drone-alt"></i></div>
+            <div class="feature-text">
+              <h3>Drones autónomos</h3>
+              <p>Navegación GPS avanzada con sensores LiDAR y visión computacional para rutas óptimas.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
+            <div class="feature-text">
+              <h3>Sistema de entrega seguro</h3>
+              <p>Caja automatizada con compuerta controlada por QR para máxima seguridad.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <div class="feature-text">
+              <h3>Carga inalámbrica</h3>
+              <p>Estaciones de carga automática para operación continua 24/7.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="solution-image">
+        <img src="assets\drone_image.jpg" alt="Drone de entrega" class="drone-image">
+      </div>
+    </section>
+
+    <section id="benefits" class="benefits-section">
+      <h2>Ventajas competitivas</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3><span class="benefit-number">1</span>Costos reducidos</h3>
+          <p>Hasta 60% más económico que el delivery tradicional por eliminación de costos laborales.</p>
+        </div>
+        <div class="benefit-card">
+          <h3><span class="benefit-number">2</span>Operación 24/7</h3>
+          <p>Servicio continuo sin limitaciones de horarios humanos, ideal para pedidos nocturnos.</p>
+        </div>
+        <div class="benefit-card">
+          <h3><span class="benefit-number">3</span>Entrega más rápida</h3>
+          <p>Rutas aéreas directas sin tráfico, con tiempos de entrega un 40% más rápidos.</p>
+        </div>
+        <div class="benefit-card">
+          <h3><span class="benefit-number">4</span>Tecnología escalable</h3>
+          <p>Sistema diseñado para integración con apps existentes y expansión rápida.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+      <h2>BotEats en acción</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/m_U5UnEjl4Y?short=1" title="Demo BotEats" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="metrics" class="metrics-section">
+      <h2>Nuestro impacto en números</h2>
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-value" data-count="60">60</div>
+          <div class="metric-label">% reducción costos</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-count="24">24</div>
+          <div class="metric-label">horas operación</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-count="40">40</div>
+          <div class="metric-label">% más rápido</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-count="99">99</div>
+          <div class="metric-label">% éxito entregas</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>¿Listo para revolucionar tu delivery?</h2>
+          <p>Contáctanos para una demostración personalizada o información sobre nuestros planes.</p>
+          <div class="info-items">
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>contacto@boteats.com</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>+1 (555) 123-4567</span>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Nombre completo" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="business" placeholder="Nombre del negocio" required>
+          </div>
+          <div class="form-group">
+            <select id="interest" required>
+              <option value="" disabled selected>Tipo de interés</option>
+              <option value="restaurant">Restaurante</option>
+              <option value="investor">Inversionista</option>
+              <option value="partner">Socio comercial</option>
+              <option value="other">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="Tu mensaje (opcional)"></textarea>
+          </div>
+          <button type="submit" class="submit-button">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">BotEats</div>
+      <div class="footer-links">
+        <a href="assets/ProteccionDatos.pdf" target="_blank">Legal</a>
+        <a href="#politic">Politica Privacidad</a>
+        <a href="#benefits">Beneficios</a>
+        <a href="#contact">Contacto</a>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
-  </section>
-
-  <section id="features">
-    <h2>Por Qué BotEat</h2>
-    <div class="feature-grid">
-      <div>
-        <i class="fas fa-drone"></i>
-        <p>Navegación autónoma con LiDAR</p>
-      </div>
-      <div>
-        <i class="fas fa-mobile-alt"></i>
-        <p>Seguimiento en tiempo real</p>
-      </div>
-      <div>
-        <i class="fas fa-box"></i>
-        <p>Caja de cartón con QR seguro</p>
-      </div>
-      <div>
-        <i class="fas fa-leaf"></i>
-        <p>100% sostenible</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contáctanos</h2>
-    <form id="contact-form">
-      <div class="form-group">
-        <input type="text" id="name" placeholder="Nombre" aria-label="Nombre">
-        <span class="error-message" id="name-error"></span>
-      </div>
-      <div class="form-group">
-        <input type="email" id="email" placeholder="Email" aria-label="Correo electrónico">
-        <span class="error-message" id="email-error"></span>
-      </div>
-      <textarea id="message" placeholder="Mensaje" aria-label="Mensaje"></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 BotEat</p>
-    <div>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="footer-bottom">
+    <p> &copy; <span id="year"></span>  BotEats. Todos los derechos reservados.</p>
     </div>
   </footer>
 
