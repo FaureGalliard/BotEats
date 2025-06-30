@@ -10,11 +10,44 @@
   --accent: #FFD166;
   --error: #FF6B6B;
 }
+.purpose-section {
+  padding: 5rem 2rem;
+  background-color: var(--secondary);
+  text-align: center;
+}
 
+.purpose-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+  font-family: 'Roboto', sans-serif;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.purpose-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.parrafo-fuente {
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -530,75 +563,120 @@ a {
   transform: translateY(-2px);
 }
 
-/* Footer */
-.footer {
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 3rem 2rem 1.5rem;
+/* Estilos para validación de formulario */
+.form-group input.valid,
+.form-group select.valid,
+.form-group textarea.valid {
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
 }
 
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: var(--error);
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.1);
+  animation: shake 0.3s ease-in-out;
 }
 
-.footer-logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.footer-links a {
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: var(--primary-light);
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a {
+.error-message {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  gap: 0.5rem;
 }
 
-.social-links a:hover {
-  background-color: var(--primary);
-  transform: translateY(-3px);
+.error-message::before {
+  content: "⚠️";
+  font-size: 0.875rem;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideIn 0.3s ease-out;
 }
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
+
+.success-message i {
+  color: #28a745;
+  font-size: 1.25rem;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-button:disabled:hover {
+  background-color: #ccc;
+  transform: none;
+}
+
+/* Animaciones */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Indicadores visuales adicionales */
+.form-group {
+  position: relative;
+}
+
+.form-group input.valid::after,
+.form-group select.valid::after {
+  content: "✓";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #28a745;
+  font-weight: bold;
+}
+
+.form-group.has-icon {
+  position: relative;
+}
+
+.form-group.has-icon::after {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.form-group.valid::after {
+  content: "✓";
+  color: #28a745;
+}
+
+.form-group.invalid::after {
+  content: "✕";
+  color: var(--error);
 }
 
 /* Responsive Design - Modificado para hamburguesa */
